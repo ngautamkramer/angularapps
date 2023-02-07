@@ -1,0 +1,27 @@
+<div class="container p-5">
+    <h1 class="text-center">Add User</h1>
+    <form [formGroup]="form" (ngSubmit)="addThisUser()" class="mt-5">
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="name" class="col-form-label">Name</label>
+                <input type="text" class="form-control" required formControlName="name" id="name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="col-form-label">Email</label>
+                <input type="email" class="form-control" required formControlName="email" id="email">
+            </div>
+            <div class="mb-3">
+                <label for="dob" class="col-form-label">DOB</label>
+                <input type="date" class="form-control" required formControlName="dob" id="dob">
+            </div>
+            <div class="mb-3">
+                <label for="height" class="col-form-label">Height</label>
+                <input type="number" class="form-control" required formControlName="height" id="height">
+            </div>
+        </div>
+        <div class="modal-footer mt-4">
+            <a [routerLink]="['/']" class="btn btn-secondary me-1">Cancel</a> 
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>

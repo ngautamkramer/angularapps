@@ -1,0 +1,7 @@
+<div class="container">
+    <h1 class="text-center mt-5">User List</h1>
+    <div class="text-end mb-2 mt-5">
+        <a [routerLink]="['/adduser']" class="btn btn-primary">+ Add New User</a>
+    </div>
+    <app-table (userDeleteEmittor)="userDeleteEmittor($event)" [userList]="userList"></app-table>
+</div>
