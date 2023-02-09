@@ -6,7 +6,9 @@
       </ng-container>
     </tr>
   </thead>
+  
   <tbody>
+
     <ng-container *ngFor="let user of userList">
       <tr>
         <td>{{ user.id }}</td>
@@ -20,6 +22,15 @@
         </td>
       </tr>
     </ng-container>
+
+    <ng-container *ngIf="userList.length == 0">
+      <tr>
+        <td colspan="6" class="text-center p-4">No user availabe!</td>
+      </tr>
+    </ng-container>
+
   </tbody>
 </table>
+
+<p class="p-0"><b>Total Users:</b> {{userList.length}}</p>
 

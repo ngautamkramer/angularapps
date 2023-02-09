@@ -28,7 +28,7 @@ export class AdduserComponent implements OnInit {
   addThisUser() {
     this.dbServices.addData(this.form.value);
     alert("User saved successfully!");
-    this.router.navigate(['/']);
+    this.router.navigate(['/users']);
   }
 
 }

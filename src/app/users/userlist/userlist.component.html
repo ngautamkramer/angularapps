@@ -1,7 +1,22 @@
 <div class="container">
-    <h1 class="text-center mt-5">User List</h1>
-    <div class="text-end mb-2 mt-5">
-        <a [routerLink]="['/adduser']" class="btn btn-primary">+ Add New User</a>
+    
+    <h2 class="text-center mt-5">User List</h2>
+    <div class="row mb-2 mt-5 mb-3">
+        
+        <div class="col-sm-4">
+            <input type="text" [(ngModel)]="searchText" (input)="searchUserByKeyword()" class="form-control" placeholder="Search...">
+        </div>
+
+        <div class="col-sm-8">
+            <div class="text-end">
+                <a [routerLink]="['/adduser']" class="btn btn-primary">+ Add New User</a>
+            </div>
+        </div>
+    
     </div>
-    <app-table (userDeleteEmittor)="userDeleteEmittor($event)" [userList]="userList"></app-table>
+    
+    <main class="my-3 p-3 bg-body rounded shadow-sm">
+        <app-table (userDeleteEmittor)="userDeleteEmittor($event)" [userList]="userList"></app-table>
+    </main>
+
 </div>

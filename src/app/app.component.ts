@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input } from '@angular/core';
+import { DbService } from './services/db.service';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +10,5 @@ import { Component, EventEmitter, Input } from '@angular/core';
 export class AppComponent {
 
   constructor() { };
-
-  @Input() sendUserInputToUserListCmp = new EventEmitter<any>();
-
   title: String = "userList";
-  public searchText: String = "";
-
-  searchUserByKeyword(text: String) {
-    this.searchText = text
-  }
-
 }
