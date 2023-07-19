@@ -1,0 +1,9 @@
+<div class="px-4 py-5 my-5 text-center" *ngIf="!loaderStatus">
+    <img class="d-block mx-auto mb-4" [width]="270" src="//img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?w=360" alt="" width="140">
+    <h4 class="display-5 fw-bold">Total Books: {{userList.length}}</h4>
+</div>
+
+<div class="d-flex justify-content-center px-4 py-5 my-5" *ngIf="loaderStatus">
+    <div class="spinner-border" role="status"></div>
+</div>
+  

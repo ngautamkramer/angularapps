@@ -1,0 +1,27 @@
+<div class="container p-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <h1 class="text-center">Edit User</h1>
+            <form [formGroup]="form" (ngSubmit)="editThisUser()" class="mt-5">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="name" class="col-form-label">Name</label>
+                        <input type="text" class="form-control" required formControlName="booktitle" id="booktitle">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="col-form-label">Email</label>
+                        <input type="email" class="form-control" required formControlName="bookauthor" id="bookauthor">
+                    </div>
+                    <div class="mb-3">
+                        <label for="dob" class="col-form-label">DOB</label>
+                        <input type="date" class="form-control" required formControlName="publishdate" id="publishdate">
+                    </div>
+                </div>
+                <div class="modal-footer mt-4">
+                    <a [routerLink]="['/books']" class="btn btn-secondary me-1">Cancel</a> 
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
